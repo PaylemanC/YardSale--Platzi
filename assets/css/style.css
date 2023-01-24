@@ -6,3 +6,7 @@
     --text-input-field: #F7F7F7;
     --soft-grey: #C7C7C7;
 }
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
