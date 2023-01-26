@@ -2,9 +2,10 @@
     --white: #FFFFFF;
     --black: #000000;
     --dark: #232830;
-    --main-color: #ACD9B2;
-    --text-input-field: #F7F7F7;
-    --soft-grey: #C7C7C7;
+    --main-color: #82b389;
+    --text-input-field: #ededed;
+    --soft-grey: #a3a3a3;
+    --background: #F5F5F5;
     --sm: 14px;
     --md: 16px;
     --lg: 18px;
@@ -13,6 +14,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     margin: 0 auto;
+    background: var(--background);
 }
 
 .primary-button {
@@ -25,4 +27,7 @@ body{
     font-size: var(--md);
     font-weight: bold;
     height: 50px;
+}
+.primary-button:hover {
+    background-color: #8bbd93;
 }
