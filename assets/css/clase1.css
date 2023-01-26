@@ -40,7 +40,7 @@
 label {
     font-size: var(--sm);
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .input-password {
@@ -50,6 +50,7 @@ label {
     height: 32px;
     font-size: var(--md);
     padding: 4px;
+    margin-bottom: 12px;
 }
 
 .login__button {
