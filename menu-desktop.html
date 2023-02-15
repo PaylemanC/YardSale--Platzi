@@ -11,7 +11,54 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+        .desktop-menu {
+            width: 91px;
+            height: auto;
+            border: 1px solid var(--main-color);
+            border-radius: 4px; 
+            padding: 20px 20px 0 20px;
+        }
 
+        .desktop-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .desktop-menu ul li {
+            text-align: end;
+            font-size: var(--md);
+        }
+
+        .desktop-menu ul li:not(:last-child) {
+            font-weight: bold;
+        }
+
+        .desktop-menu ul li:last-child {
+            padding-top: 20px;
+            border-top: 2px solid var(--soft-grey);
+        }
+        .desktop-menu ul li:last-child a {
+            color: var(--main-color);
+        }
+
+        .desktop-menu ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        a {
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+        }
+        a:hover, a:focus {
+            background-size: 100% 2px;
+        }
     </style>
 </head>
 
