@@ -11,7 +11,41 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+        .mobile-menu {
+            padding: 4px 20px;
+            background-color: var(--text-input-field);
+        }
 
+        .mobile-menu ul {
+            padding: 0;
+            margin: 48px 0 0;
+            list-style: none;
+        }
+
+        .mobile-menu ul:nth-child(1) {
+            border-bottom: 2px solid var(--soft-grey);
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 26px;
+            font-size: var(--md)
+        }
+
+        .mobile-menu li a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+            font-size: var(--lg)
+        }
+
+        .mobile-menu ul:nth-child(3) {
+            letter-spacing: 1px;
+            font-size: var(--md)
+        }
+
+        .mobile-menu .sign-out {
+            color: var(--main-color);
+        }
     </style>
 </head>
 
@@ -34,7 +68,7 @@
 
         <ul>
             <li class="email">carinapaylemandev@gmail.com</li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="#" class="sign-out">Salir</a></li>
         </ul>
     </div>
 </body>
