@@ -11,58 +11,146 @@
     <title>Yard Sale</title>
 
     <style>
+        .my-orders {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
 
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+
+        .my-orders-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 50%;
+        }
+
+        .my-orders__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .my-orders__content p:nth-child(2) {
+            font-weight: bold;
+            color: var(--main-color);
+            font-size: var(--lg);
+        }
+
+        .content__order {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+
+        .content__order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content__order p span:nth-child(1) {
+            font-size: var(--sm);
+        }
+
+        .content__order p span:nth-child(2) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .content__order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .shopping-cart__product {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+
+        .shopping-cart__product figure {
+            margin: 0;
+        }
+
+        .shopping-cart__product img {
+            height: 70px;
+            width: 70px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .shopping-cart__product p:nth-child(2) {
+            font-size: var(--sm);
+            color: var(--dark)
+        }
+
+        .shopping-cart__product p:last-child {
+            font-weight: bold;
+            font-size: var(--md)
+        }
     </style>
 </head>
 
 <body>
     <section class="my-orders">
         <div class="my-orders-container">
-            <div class="my-orders__content">
-                <p>
-                    <span>16.2.23</span>
-                    <span>6 artículos</span>
-                </p>
-                <p>$560.00</p>
-            </div>
+            <h1 class="title">Mis pedidos</h1>
 
-            <div class="my-orders__shopping-cart">
-                <!--#01-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
-                <!--#02-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
-                <!--#03-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
-                <!--#04-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
-                <!--#05-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
-                <!--#06-->
-                <figure class="shopping-cart__product">
-                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                    <p>Sillón</p>
-                    <p>$120.00</p>
-                </figure>
+            <div class="my-orders__content">
+
+                <div class="content__order">
+                    <p>
+                        <span>16.2.23</span>
+                        <span>6 artículos</span>
+                    </p>
+                    <p>$480.00</p>
+                </div>
+
+                <div class="my-orders__shopping-cart">
+                    <!--#01-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                    </div>
+                    <!--#02-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                    </div>
+                    <!--#03-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                    </div>
+                    <!--#04-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                    </div>
+                </div>
+            
             </div>
         </div>
     </section>
