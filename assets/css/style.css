@@ -156,6 +156,44 @@ a:hover, a:focus {
     background-size: 100% 2px;
 }
 
+.mobile-menu {
+    padding: 4px 20px;
+    background-color: var(--text-input-field);
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 48px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 2px solid var(--soft-grey);
+}
+
+.mobile-menu ul li {
+    margin-bottom: 26px;
+    font-size: var(--md)
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: var(--md)
+}
+
+.mobile-menu ul:nth-child(3) {
+    letter-spacing: 1px;
+    font-size: var(--md);
+    position: absolute;
+    bottom: 0;
+}
+
+.mobile-menu .sign-out {
+    color: var(--main-color);
+}
+
 
 
 
