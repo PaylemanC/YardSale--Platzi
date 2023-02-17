@@ -14,3 +14,152 @@ body{
     margin: 0 auto;
     background: var(--background);
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--main-color);
+    padding: 0 24px;
+    margin: 6px 0;
+}
+
+.menu {
+    display: none;
+}
+
+.logo {
+    width: 125px;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-left ul {
+    margin-left: 12px;
+}
+
+.navbar-left ul li a, .navbar-right ul li {
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .4s;
+}
+a:hover, a:focus {
+    background-size: 100% 2px;
+    color: var(--main-color);
+}
+
+.navbar__email {
+    color: var(--soft-grey);
+    font-size: var(--sm);
+}
+
+.navbar__shopping-cart {
+    position: relative;
+    cursor: pointer;
+}
+.navbar__shopping-cart:hover {
+    transform: scale(1.03);
+}
+
+.navbar__shopping-cart div {
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-menu {
+    width: 91px;
+    height: auto;
+    border: 1px solid var(--main-color);
+    border-radius: 4px; 
+    padding: 20px 20px 0 20px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li {
+    text-align: end;
+    font-size: var(--md);
+}
+
+.desktop-menu ul li:not(:last-child) {
+    font-weight: bold;
+}
+
+.desktop-menu ul li:last-child {
+    padding-top: 20px;
+    border-top: 2px solid var(--soft-grey);
+}
+.desktop-menu ul li:last-child a {
+    color: var(--main-color);
+}
+
+.desktop-menu ul li a {
+    color: var(--dark);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .4s;
+}
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar__email {
+        display: none;
+    }
+}
