@@ -94,7 +94,15 @@ a:hover, a:focus {
     align-items: center;
 }
 
+.inactive {
+    display: none;
+}
+
 .desktop-menu {
+    position: absolute;
+    top: 55px; /*67*/
+    right: 70px;
+    background-color: white;
     width: 91px;
     height: auto;
     border: 1px solid var(--main-color);
