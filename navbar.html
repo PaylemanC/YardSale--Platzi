@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Yard Sale</title>
-
+    
     <style>
         nav {
             display: flex;
             justify-content: space-between;
             border-bottom: 2px solid var(--main-color);
             padding: 0 24px;
+            margin: 6px 0;
         }
 
         .menu {
@@ -64,12 +66,14 @@
         .navbar__email {
             color: var(--soft-grey);
             font-size: var(--sm);
-            margin-right: 12px;
         }
 
         .navbar__shopping-cart {
             position: relative;
             cursor: pointer;
+        }
+        .navbar__shopping-cart:hover {
+            transform: scale(1.03);
         }
 
         .navbar__shopping-cart div {
@@ -90,6 +94,7 @@
         @media screen and (max-width: 640px) {
             .menu {
                 display: block;
+                cursor: pointer;
             }
 
             .navbar-left ul {
@@ -124,7 +129,7 @@
                 <li class="navbar__email">carinapaylemandev@gmail.com</li>
                 <li class="navbar__shopping-cart">
                     <img src="assets/icons/icon_shopping_cart.svg" alt="Carrito">
-                    <div>2</div>
+                    <div>4</div>
                 </li>
             </ul>
         </div>
