@@ -67,8 +67,13 @@ a:hover, a:focus {
 }
 
 .navbar__email {
+    cursor: pointer;
     color: var(--soft-grey);
     font-size: var(--sm);
+}
+.navbar__email:hover, .navbar__email:focus-visible {
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 .navbar__shopping-cart {
@@ -100,8 +105,8 @@ a:hover, a:focus {
 
 .desktop-menu {
     position: absolute;
-    top: 55px; /*67*/
-    right: 70px;
+    top: 55px; 
+    right: 50px;
     background-color: white;
     width: 91px;
     height: auto;
