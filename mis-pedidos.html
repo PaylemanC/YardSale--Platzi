@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Yard Sale</title>
 
     <style>
         .my-orders {
@@ -18,9 +18,22 @@
             place-items: center;
         }
 
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .title-container img {
+            transform: rotate(180deg);
+            margin: 0 8px 0 4px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
         .title {
             font-size: var(--lg);
-            margin-bottom: 40px;
         }
 
         .my-orders-container {
@@ -57,12 +70,12 @@
         }
 
         .content__order p span:nth-child(1) {
-            font-size: var(--sm);
+            font-size: var(--md);
+            font-weight: bold;
         }
 
         .content__order p span:nth-child(2) {
-            font-size: var(--md);
-            font-weight: bold;
+            font-size: var(--sm);
         }
 
         .content__order p:nth-child(2) {
@@ -104,14 +117,17 @@
 <body>
     <section class="my-orders">
         <div class="my-orders-container">
-            <h1 class="title">Mis pedidos</h1>
-
+            <div class="title-container">
+                <a href="mis-compras.html"><img src="assets/icons/flechita.svg" alt="Atrás"></a>
+                <h1 class="title">Mi pedido</h1>
+            </div>
+    
             <div class="my-orders__content">
 
                 <div class="content__order">
                     <p>
                         <span>16.2.23</span>
-                        <span>6 artículos</span>
+                        <span>4 artículos</span>
                     </p>
                     <p>$480.00</p>
                 </div>
