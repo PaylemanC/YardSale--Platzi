@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
     
     <style>
         .product-detail {
@@ -21,7 +21,7 @@
         }
 
         .product-detail__close {
-            background: var(--white);
+            background: var(--background);
             width: 14px;
             height: 14px;
             cursor: pointer;
@@ -30,6 +30,18 @@
             left: 8px;
             padding: 8px;
             border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-detail__close:hover {
+            background: var(--soft-grey);
+        }
+
+        .product-detail__close img {
+            width: 14px;
+            height: 14px;
         }
 
         .product-detail > img:nth-child(2) {
@@ -64,7 +76,7 @@
             background: var(--main-color);
             border-radius: 8px;
             border: none;
-            color: var(--white);
+            color: white;
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
@@ -79,10 +91,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .add-to-cart img {
-            margin-right: 8px;
         }
 
         @media screen and (max-width: 640px) {
@@ -102,7 +110,7 @@
             <p>$120,00</p>
             <p>Candelabro</p>
             <p>Et officia enim sit voluptate aliquip dolor velit adipisicing ad aute et elit duis reprehenderit. Fugiat excepteur mollit cillum aute quis reprehenderit dolor reprehenderit ullamco tempor laboris amet. Veniam labore fugiat fugiat labore sint ullamco pariatur aute cupidatat quis dolor est dolore eiusmod.</p>
-            <button class="primary-button add-to-cart"><img src="assets/icons/bt_add_to_cart.svg" alt="Carrito">Añadir al carrito</button>
+            <button class="primary-button add-to-cart">Añadir al carrito</button>
         </div>
     </aside>
 </body>
