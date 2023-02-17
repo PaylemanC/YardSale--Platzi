@@ -1,3 +1,4 @@
+/*------------------Estilos generales------------------*/
 :root{
     --dark: #232830;
     --main-color: #82b389;
@@ -15,6 +16,11 @@ body{
     background: var(--background);
 }
 
+
+
+
+
+/*Navbar general------------------*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -103,6 +109,11 @@ a:hover, a:focus {
     display: none;
 }
 
+
+
+
+
+/*Menú desktop------------------*/
 .desktop-menu {
     position: absolute;
     top: 55px; 
@@ -156,6 +167,11 @@ a:hover, a:focus {
     background-size: 100% 2px;
 }
 
+
+
+
+
+/*Menú mobile------------------*/
 .mobile-menu {
     padding: 4px 20px;
     background-color: var(--text-input-field);
