@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
     <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
         .login {
@@ -74,10 +78,14 @@
         }
 
         .primary-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: var(--main-color);
+            text-decoration: none;
             border-radius: 8px;
             border: none;
-            color: var(--white);
+            color: white;
             width: 100%;
             cursor: pointer;
             font-size: var(--md);
@@ -120,11 +128,11 @@
         <div class="content-container">
             <img src="assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
             <h1 class="title">¡Email enviado con éxito!</h1>
-            <p class="subtitle">Revisa tu correo electrónico para obtener instrucciones de recuperación de tu contraseña.</p>
+            <p class="subtitle">Revisa tu correo electrónico para recibir instrucciones de la recuperación de tu contraseña.</p>
             <div class="email-img">
                 <img src="assets/icons/email.svg" alt="Email">
             </div>
-            <button class="primary-button login-button">Login</button>
+            <a class="primary-button login-button" href="login.html">Ingresar</a>
             <p class="resend">
                 <span>¿No recibiste el email? </span><a href="#"> Reenviar</a>
             </p>
