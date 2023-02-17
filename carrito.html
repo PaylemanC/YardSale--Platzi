@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .product-detail {
+            width: 360px;
+            padding: 16px;
+            position: absolute;
+            right: 0;
+            box-sizing: border-box;
+        }
+
+        .title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .title-container img {
+            transform: rotate(180deg);
+            margin: 0 8px 0 4px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+
+        .content__order {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+
+        .content__order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content__order p span:nth-child(1) {
+            font-size: var(--sm);
+        }
+
+        .content__order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .shopping-cart__product {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+
+        .shopping-cart__product figure {
+            margin: 0;
+        }
+
+        .shopping-cart__product img {
+            height: 70px;
+            width: 70px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .shopping-cart__product p:nth-child(2) {
+            font-size: var(--sm);
+            color: var(--dark)
+        }
+
+        .shopping-cart__product p:last-child {
+            font-weight: bold;
+            font-size: var(--md)
+        }
+
+        .shopping-cart__product .btn-cancel {
+            height: 18px;
+            width: 18px;
+            cursor: pointer;
+            margin-right: 12px;
+        }
+
+        .primary-button {
+            background: var(--main-color);
+            border-radius: 8px;
+            border: none;
+            color: white;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            padding: 1rem;
+        }
+        .primary-button:hover {
+            background-color: #8bbd93;
+        }
+
+        @media screen and (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="title-container">
+            <img src="assets/icons/flechita.svg" alt="Expandir">
+            <p class="title">Mi carrito</p>
+        </div>
+        <div class="my-orders__content">
+                <div class="my-orders__shopping-cart">
+                    <!--#01-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#02-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#03-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#04-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                </div>
+            
+                <div class="content__order">
+                    <p>
+                        <span>Total</span>
+                    </p>
+                    <p>$480.00</p>
+                    <button class="primary-button">Comprar</button>
+                </div>
+        </div>
+    </aside>
+</body>
+</html>

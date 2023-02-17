@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .my-orders {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+
+        .my-orders-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 50%;
+        }
+
+        .my-orders__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .my-orders__content p:nth-child(2) {
+            font-weight: bold;
+            color: var(--main-color);
+            font-size: var(--lg);
+        }
+
+        .content__order {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .content__order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content__order p span:nth-child(1) {
+            font-size: var(--md);
+        }
+
+        .content__order p span:nth-child(2) {
+            font-size: var(--sm);
+        }
+
+        .content__order p:nth-child(2) {
+            text-align: end;
+        }
+
+        .content__order img {
+            cursor: pointer;
+            padding: 2px;
+            width: 14px;
+            height: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="my-orders">
+        <div class="my-orders-container">
+            <h1 class="title">Mis compras</h1>
+
+            <div class="my-orders__content">
+
+                <div class="content__order">
+                    <p>
+                        <span>16.2.23</span>
+                        <span>4 artículos</span>
+                    </p>
+                    <p>$480.00</p>
+                    <a href="mis-pedidos.html"><img src="assets/icons/flechita.svg" alt="Ver"></a>
+                </div>       
+                <div class="content__order">
+                    <p>
+                        <span>10.2.23</span>
+                        <span>6 artículos</span>
+                    </p>
+                    <p>$590.00</p>
+                    <a href="#"><img src="assets/icons/flechita.svg" alt="Ver"></a>
+                </div> 
+                <div class="content__order">
+                    <p>
+                        <span>1.2.23</span>
+                        <span>2 artículos</span>
+                    </p>
+                    <p>$40.00</p>
+                    <a href="#"><img src="assets/icons/flechita.svg" alt="Ver"></a>
+                </div> 
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--main-color);
+            padding: 0 24px;
+            margin: 6px 0;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 125px;
+        }
+
+        .navbar-left {
+            display: flex;
+        }
+
+        .navbar-left ul, .navbar-right ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul li a, .navbar-right ul li {
+            padding: 8px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--dark);
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .4s;
+        }
+        a:hover, a:focus {
+            background-size: 100% 2px;
+            color: var(--main-color);
+        }
+
+        .navbar__email {
+            color: var(--soft-grey);
+            font-size: var(--sm);
+        }
+
+        .navbar__shopping-cart {
+            position: relative;
+            cursor: pointer;
+        }
+        .navbar__shopping-cart:hover {
+            transform: scale(1.03);
+        }
+
+        .navbar__shopping-cart div {
+            width: 18px;
+            height: 18px;
+            background-color: var(--main-color);
+            border-radius: 100%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -5px;
+            right: -1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 640px) {
+            .menu {
+                display: block;
+                cursor: pointer;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar__email {
+                display: none;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <nav>
+        <img src="assets/icons/icon_menu.svg" alt="Menú" class="menu">
+
+        <div class="navbar-left">
+            <img src="assets/logos/logo_yard_sale.svg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">Todo</a></li>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Electrodomesticos</a></li>
+                <li><a href="#">Muebles</a></li>
+                <li><a href="#">Juguetes</a></li>
+                <li><a href="#">Otros</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar__email">carinapaylemandev@gmail.com</li>
+                <li class="navbar__shopping-cart">
+                    <img src="assets/icons/icon_shopping_cart.svg" alt="Carrito">
+                    <div>4</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

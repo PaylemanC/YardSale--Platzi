@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 26px;
+            place-content: center;
+            margin: 2vh 0;
+        }
+
+        .product-card {
+            width: 240px;
+        }
+
+        .product-card__img {
+            width: 230px;
+            height: 240px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 4px double var(--main-color);
+            cursor: pointer;
+        }
+
+        .product-card__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-card__info div p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-bottom: 4px;
+        }
+
+        .product-card__info div p:nth-child(2) {
+            font-size: var(--md);
+            margin: 4px;
+            color: var(--dark);
+        }
+
+        .product-card figure {
+            margin: 0;
+        }
+
+        .product-card figure img {
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+        }
+        .product-card figure img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 640px) {
+            .cards-container {
+                grid-template-columns: repeat(auto-fill, 140px);
+            }
+
+            .product-card {
+                width: 140px;
+            }
+
+            .product-card__img {
+                width: 100%;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            <!--#01-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#02-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#03-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#04-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#05-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#06-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#07-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#08-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#09-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#10-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#11-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#12-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#13-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#14-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+             <!--#15-->
+             <div class="product-card">
+                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Candelabro</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <!--#16-->
+            <div class="product-card">
+                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
+                <div class="product-card__info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Sillón</p>
+                    </div>
+                    <figure>
+                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

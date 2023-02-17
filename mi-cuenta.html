@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            box-sizing: content-box;
+            max-width: 300px;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none;
+        }
+        
+        .title {
+            font-size: var(--lg);
+            text-align: start; 
+            margin-bottom: 36px;
+        }
+
+        .login__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .personal-value {
+            color: var(--main-color);
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: var(--lg);
+            margin: 8px 0 32px 0;
+        }
+
+        .login__button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        .secondary-button {
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid var(--main-color);
+            color: var(--main-color);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--sm);
+            height: 50px;
+        }
+        .secondary-button:hover {
+            transform: scale(1.01);
+        }
+
+        @media screen and (max-width: 640px) {
+            .logo {
+                display: block;
+            }
+
+            .secondary-button {
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login">
+        <div class="content-container">
+            <h1 class="title">Mi cuenta</h1>
+    
+            <form action="#" class="login__form">
+                <label for="name">Nombre</label>
+                <p class="personal-value">Carina Payleman</p>
+
+                <label for="email">Correo electrónico</label>
+                <p class="personal-value">carinapaylemandev@gmail.com</p>
+
+                <label for="password">Contraseña</label>
+                <p class="personal-value">*********</p>
+
+                <input type="submit" value="Editar" class="secondary-button login__button">
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

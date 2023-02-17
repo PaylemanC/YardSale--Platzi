@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yard Sale</title>
+    <link rel="website icon" type="svg" href="assets/logos/favicon_yard_sale.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        
+        .content-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+            justify-items: center;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display: none;
+        }
+        
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+            
+        .subtitle {
+            color: var(--soft-grey);
+            font-size: var(--md);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+            
+        .email-img {
+            width: 132px;
+            height: 132px;
+            border-radius: 100%;
+            background-color: var(--text-input-field);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .email-img img {
+            width: 80px;
+            animation: shake 1.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes shake {
+            0% { 
+                transform: translate(1px, 1px) rotate(0deg); 
+            }
+            20% { 
+                transform: translate(-3px, 0px) rotate(1deg); 
+            }
+            80% { 
+                transform: translate(3px, 0px) rotate(1deg); 
+            }
+            100% { transform: translate(-1px, -1px) rotate(0deg); } 
+        }
+
+        .primary-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--main-color);
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .primary-button:hover {
+            background-color: #8bbd93;
+        }
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        .resend {
+            font-size: var(--sm);
+        }
+            
+        .resend span {
+            color: var(--soft-grey);
+        }
+            
+        .resend a {
+            color: var(--main-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        
+        @media (max-width: 640px) {
+            .logo {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="login">
+        <div class="content-container">
+            <img src="assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">¡Email enviado con éxito!</h1>
+            <p class="subtitle">Revisa tu correo electrónico para recibir instrucciones de la recuperación de tu contraseña.</p>
+            <div class="email-img">
+                <img src="assets/icons/email.svg" alt="Email">
+            </div>
+            <a class="primary-button login-button" href="login.html">Ingresar</a>
+            <p class="resend">
+                <span>¿No recibiste el email? </span><a href="#"> Reenviar</a>
+            </p>
+        </div>
+      </section>
+</body>
+
+</html>
