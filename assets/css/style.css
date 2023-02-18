@@ -175,10 +175,12 @@ a:hover, a:focus {
 .mobile-menu {
     position: absolute;
     top: 67px;
-    padding: 4px 20px;
+    left: 0;
+    padding: 6px 20px;
+    width: calc(100% - 42px);
     background-color: white;
-    border: 1px solid var(--soft-grey);
-    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid var(--soft-grey);
+    border-radius: 0 0 36px 36px;
 }
 
 .mobile-menu ul {
@@ -421,9 +423,10 @@ aside {
 }
 
 #productDetail > img:nth-child(2) {
-    width: 360px;
-    height: 360px;
+    width: 354px;
+    height: 354px;
     object-fit: cover;
+    border: 2px solid var(--main-color);
     border-radius: 0 0 20px 20px;
 }
 
