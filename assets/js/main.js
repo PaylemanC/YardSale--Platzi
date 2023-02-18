@@ -8,13 +8,22 @@ const aside = document.querySelector('.product-detail')
 const toggleElement = (element) => {
     element.classList.toggle('inactive');
 }
+const hideElement = (element) => {
+    element.classList.add('inactive')
+}
 
 menuEmail.addEventListener('click', () => {
     toggleElement(desktopMenu);
+    hideElement(mobileMenu);
+    hideElement(aside);
 });
 burgerMenu.addEventListener('click', () => {
     toggleElement(mobileMenu);
+    hideElement(desktopMenu);
+    hideElement(aside);
 });
 cartMenu.addEventListener('click', () => {
-    toggleElement(aside);    
+    toggleElement(aside);   
+    hideElement(mobileMenu);
+    hideElement(desktopMenu); 
 })
