@@ -174,9 +174,11 @@ a:hover, a:focus {
 /*Menú mobile------------------*/
 .mobile-menu {
     position: absolute;
-    top: 68px;
+    top: 67px;
     padding: 4px 20px;
     background-color: white;
+    border: 1px solid var(--soft-grey);
+    border-radius: 0 0 16px 16px;
 }
 
 .mobile-menu ul {
