@@ -88,13 +88,16 @@ function createProductCard () {
     cardsContainer.appendChild(productCard);
 }
 
-for (product of productList) {
-    createProductCard();
+function renderProducts (arrayProducts) {
+    for (product of arrayProducts) {
+        createProductCard();
+    }    
 }
 
 
 
 
+renderProducts(productList);
 
 menuEmail.addEventListener('click', () => {
     toggleElement(desktopMenu);
