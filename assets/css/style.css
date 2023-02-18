@@ -384,6 +384,92 @@ a:hover, a:focus {
 
 
 
+/*PRODUCT DETAIL------------------*/
+.product-detail {
+    width: 360px;
+    padding-bottom: 24px;
+    position: absolute;
+    right: 0;
+    background-color: var(--text-input-field);
+}
+
+.product-detail__close {
+    background: var(--background);
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 8px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-detail__close:hover {
+    background: var(--soft-grey);
+}
+
+.product-detail__close img {
+    width: 14px;
+    height: 14px;
+}
+
+.product-detail > img:nth-child(2) {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+}
+
+.product-detail__info {
+    margin: 24px 24px 0 24px;
+}
+
+.product-detail__info p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+}
+
+.product-detail__info p:nth-child(2) {
+    font-weight: bold;
+    font-size: var(--lg);
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.product-detail__info p:nth-child(3) {
+    font-size: var(--sm);
+    margin-bottom: 32px;
+}
+
+.primary-button {
+    background: var(--main-color);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+.primary-button:hover {
+    background-color: #8bbd93;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
 
 
 @media screen and (max-width: 640px) {
@@ -394,6 +480,10 @@ a:hover, a:focus {
 
     .navbar-left ul, .navbar__email, .desktop-menu {
         display: none;
+    }
+
+    .product-detail {
+        width: 100%;
     }
 
     .product-detail {
