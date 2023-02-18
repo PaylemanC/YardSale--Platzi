@@ -214,6 +214,116 @@ a:hover, a:focus {
 
 
 
+/*Aside CARRITO------------------*/
+.product-detail {
+    background-color: white;
+    border: 1px solid var(--soft-grey);
+    width: 360px;
+    padding: 0 16px;
+    position: absolute;
+    right: 0;
+    top: 67px;
+    box-sizing: border-box;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-container img {
+    transform: rotate(180deg);
+    margin: 0 8px 0 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.content__order {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+
+.content__order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__order p span:nth-child(1) {
+    font-size: var(--sm);
+}
+
+.content__order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+
+.shopping-cart__product {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.shopping-cart__product figure {
+    margin: 0;
+}
+
+.shopping-cart__product img {
+    height: 70px;
+    width: 70px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.shopping-cart__product p:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--dark)
+}
+
+.shopping-cart__product p:last-child {
+    font-weight: bold;
+    font-size: var(--md)
+}
+
+.shopping-cart__product .btn-cancel {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.primary-button {
+    background: var(--main-color);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    padding: 1rem;
+}
+.primary-button:hover {
+    background-color: #8bbd93;
+}
+
+
+
+
 
 
 @media screen and (max-width: 640px) {
@@ -225,10 +335,18 @@ a:hover, a:focus {
     .navbar-left ul, .navbar__email, .desktop-menu {
         display: none;
     }
+
+    .product-detail {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 641px) {
     .mobile-menu {
         display: none;
+    }
+
+    .product-detail {
+        border-radius: 12px 0 0 12px;
     }
 }
