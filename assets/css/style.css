@@ -217,15 +217,18 @@ a:hover, a:focus {
 
 
 /*Aside CARRITO------------------*/
-.product-detail {
+aside {
     background-color: white;
     border: 1px solid var(--soft-grey);
     width: 360px;
-    padding: 0 16px;
     position: absolute;
     right: 0;
     top: 67px;
     box-sizing: border-box;
+}
+
+#shoppingCartDetail {
+    padding: 0 16px;
 }
 
 .title-container {
@@ -349,19 +352,19 @@ a:hover, a:focus {
     cursor: pointer;
 }
 
-.product-card__info {
+.product-card .product-card__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.product-card__info div p:nth-child(1) {
+.product-card .product-card__info div p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
     margin-bottom: 4px;
 }
 
-.product-card__info div p:nth-child(2) {
+.product-card .product-card__info div p:nth-child(2) {
     font-size: var(--md);
     margin: 4px;
     color: var(--dark);
@@ -385,7 +388,7 @@ a:hover, a:focus {
 
 
 /*PRODUCT DETAIL------------------*/
-.product-detail {
+aside {
     width: 360px;
     padding-bottom: 24px;
     position: absolute;
@@ -417,30 +420,30 @@ a:hover, a:focus {
     height: 14px;
 }
 
-.product-detail > img:nth-child(2) {
+#productDetail > img:nth-child(2) {
     width: 360px;
     height: 360px;
     object-fit: cover;
     border-radius: 0 0 20px 20px;
 }
 
-.product-detail__info {
+#productDetail .product-detail__info {
     margin: 24px 24px 0 24px;
 }
 
-.product-detail__info p:nth-child(1) {
+#productDetail .product-detail__info p:nth-child(1) {
     font-weight: bold;
     font-size: var(--md);
 }
 
-.product-detail__info p:nth-child(2) {
+#productDetail .product-detail__info p:nth-child(2) {
     font-weight: bold;
     font-size: var(--lg);
     margin-top: 0;
     margin-bottom: 32px;
 }
 
-.product-detail__info p:nth-child(3) {
+#productDetail .product-detail__info p:nth-child(3) {
     font-size: var(--sm);
     margin-bottom: 32px;
 }
@@ -482,11 +485,7 @@ a:hover, a:focus {
         display: none;
     }
 
-    .product-detail {
-        width: 100%;
-    }
-
-    .product-detail {
+    aside {
         width: 100%;
     }
 }
@@ -496,7 +495,7 @@ a:hover, a:focus {
         display: none;
     }
 
-    .product-detail {
+    aside {
         border-radius: 12px 0 0 12px;
     }
 }
