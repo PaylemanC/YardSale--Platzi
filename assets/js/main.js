@@ -14,12 +14,10 @@ const hideElement = (element) => {
 
 menuEmail.addEventListener('click', () => {
     toggleElement(desktopMenu);
-    hideElement(mobileMenu);
     hideElement(aside);
 });
 burgerMenu.addEventListener('click', () => {
     toggleElement(mobileMenu);
-    hideElement(desktopMenu);
     hideElement(aside);
 });
 cartMenu.addEventListener('click', () => {
