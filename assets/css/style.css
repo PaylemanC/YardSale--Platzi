@@ -115,6 +115,7 @@ a:hover, a:focus {
 
 /*Menú desktop------------------*/
 .desktop-menu {
+    z-index: 3;
     position: absolute;
     top: 55px; 
     right: 50px;
@@ -173,6 +174,8 @@ a:hover, a:focus {
 
 /*Menú mobile------------------*/
 .mobile-menu {
+    z-index: 3;
+    opacity: 93%;
     position: absolute;
     top: 67px;
     left: 0;
