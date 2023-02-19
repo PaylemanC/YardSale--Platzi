@@ -3,14 +3,20 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const burgerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cartMenu = document.querySelector('.navbar__shopping-cart');
-const shoppingCartDetail = document.querySelector('#shoppingCartDetail')
+const shoppingCartDetail = document.querySelector('#shoppingCartDetail');
+const productDetail = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetailClose = document.querySelector('.product-detail__close');
 
 const toggleElement = (element) => {
     element.classList.toggle('inactive');
 }
 const hideElement = (element) => {
     element.classList.add('inactive')
+}
+function openProductDetail() {
+    productDetail.classList.remove('inactive');
+    hideElement(shoppingCartDetail);
 }
 
 let productList = []
@@ -61,6 +67,7 @@ function createProductCard () {
     const productImg = document.createElement('img');
     productImg.classList.add('product-card__img');
     productImg.setAttribute('src', product.img);
+    productImg.addEventListener('click', openProductDetail)
 
     const productCardInfo = document.createElement('div');
     productCardInfo.classList.add('product-card__info');
@@ -99,16 +106,24 @@ function renderProducts (arrayProducts) {
 
 renderProducts(productList);
 
+//Abre o cierra MENÚ DESKTOP desde EMAIL:
 menuEmail.addEventListener('click', () => {
     toggleElement(desktopMenu);
     hideElement(shoppingCartDetail);
 });
+//Abre o cierra MENÚ MOBILE desde BURGER-ICON:
 burgerMenu.addEventListener('click', () => {
     toggleElement(mobileMenu);
     hideElement(shoppingCartDetail);
 });
+//Abre o cierra CARRITO:
 cartMenu.addEventListener('click', () => {
     toggleElement(shoppingCartDetail);   
     hideElement(mobileMenu);
     hideElement(desktopMenu); 
+    hideElement(productDetail);
+})
+//Cierra DETALLE DEL PRODUCTO desde la CRUZ:
+productDetailClose.addEventListener('click', () => {
+    hideElement(productDetail);
 })
