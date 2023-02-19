@@ -14,7 +14,8 @@ const toggleElement = (element) => {
 const hideElement = (element) => {
     element.classList.add('inactive')
 }
-function openProductDetail() {
+const openProductDetail = () => {
+    createProductDetail();
     productDetail.classList.remove('inactive');
     hideElement(shoppingCartDetail);
 }
@@ -23,26 +24,31 @@ let productList = []
 productList.push({
     name: 'Candelabro',
     price: 120,
+    description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.',
     img: 'https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600'
 })
 productList.push({
     name: 'Sillón',
     price: 120,
+    description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.',
     img: 'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600'
 })
 productList.push({
     name: 'Cámara vintage',
     price: 94,
+    description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.',
     img: 'https://images.pexels.com/photos/1327503/pexels-photo-1327503.jpeg?auto=compress&cs=tinysrgb&w=1600'
 })
 productList.push({
     name: 'Bicicleta',
     price: 60,
-    img: 'https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.',
+    img: 'https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
 })
 productList.push({
     name: 'Globo Terráqueo',
     price: 35,
+    description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.',
     img: 'https://images.pexels.com/photos/7634594/pexels-photo-7634594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 })
 
@@ -95,6 +101,61 @@ function createProductCard () {
     cardsContainer.appendChild(productCard);
 }
 
+function createProductDetail () {
+/*
+    <div class="product-detail__close">
+        <img src="assets/icons/icon_close.png" alt="Cerrar">
+    </div>
+    <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candelabro">
+    <div class="product-detail__info">
+        <p>$120,00</p>
+        <p>Candelabro</p>
+        <p>Et officia enim sit voluptate aliquip dolor velit adipisicing ad aute et elit duis reprehenderit. Fugiat excepteur mollit cillum aute quis reprehenderit dolor reprehenderit ullamco tempor laboris amet. Veniam labore fugiat fugiat labore sint ullamco pariatur aute cupidatat quis dolor est dolore eiusmod.</p>
+        <button class="primary-button add-to-cart">Añadir al carrito</button>
+    </div>
+*/
+    const productDetailClose = document.createElement('div');
+    productDetailClose.classList.add('product-detail__close');
+    const imgClose = document.createElement('img');
+    imgClose.setAttribute('src', 'assets/icons/icon_close.png');
+    imgClose.setAttribute('alt', 'Cerrar');
+    productDetailClose.appendChild(imgClose);
+    productDetailClose.addEventListener('click', () => {
+        hideElement(productDetail);
+    })
+
+    const imgProduct = document.createElement('img');
+    imgProduct.setAttribute('src', product.img);
+    imgProduct.setAttribute('alt', product.name);
+
+    const productDetailInfo = document.createElement('div');
+    productDetailInfo.classList.add('product-detail__info');
+    const price = document.createElement('p');
+    price.innerText = '$' + product.price;
+    const name = document.createElement('p');
+    name.innerText = product.name;
+    const description = document.createElement('p');
+    description.innerText = product.description;
+    const addToCart = document.createElement('button');
+    addToCart.classList.add('primary-button');
+    addToCart.classList.add('add-to-cart');
+    addToCart.innerText = "Añadir al carrito";
+    productDetailInfo.appendChild(price);
+    productDetailInfo.appendChild(name);
+    productDetailInfo.appendChild(description);
+    productDetailInfo.appendChild(addToCart);
+
+    productDetailInfo.appendChild(name);
+    productDetailInfo.appendChild(description);
+    productDetailInfo.appendChild(addToCart);
+
+
+    productDetail.appendChild(productDetailClose);
+    productDetail.appendChild(imgProduct);
+    productDetail.appendChild(productDetailInfo);
+}
+
+
 function renderProducts (arrayProducts) {
     for (product of arrayProducts) {
         createProductCard();
@@ -121,9 +182,5 @@ cartMenu.addEventListener('click', () => {
     toggleElement(shoppingCartDetail);   
     hideElement(mobileMenu);
     hideElement(desktopMenu); 
-    hideElement(productDetail);
-})
-//Cierra DETALLE DEL PRODUCTO desde la CRUZ:
-productDetailClose.addEventListener('click', () => {
     hideElement(productDetail);
 })
