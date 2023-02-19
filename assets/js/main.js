@@ -15,7 +15,6 @@ const hideElement = (element) => {
     element.classList.add('inactive')
 }
 const openProductDetail = () => {
-    createProductDetail();
     productDetail.classList.remove('inactive');
     hideElement(shoppingCartDetail);
 }
@@ -101,7 +100,7 @@ function createProductCard () {
     cardsContainer.appendChild(productCard);
 }
 
-function createProductDetail () {
+function createProductDetail (name, img, price, description) {
 /*
     <div class="product-detail__close">
         <img src="assets/icons/icon_close.png" alt="Cerrar">
@@ -125,28 +124,28 @@ function createProductDetail () {
     })
 
     const imgProduct = document.createElement('img');
-    imgProduct.setAttribute('src', product.img);
-    imgProduct.setAttribute('alt', product.name);
+    imgProduct.setAttribute('src', img);
+    imgProduct.setAttribute('alt', name);
 
     const productDetailInfo = document.createElement('div');
     productDetailInfo.classList.add('product-detail__info');
-    const price = document.createElement('p');
-    price.innerText = '$' + product.price;
-    const name = document.createElement('p');
-    name.innerText = product.name;
-    const description = document.createElement('p');
-    description.innerText = product.description;
+    const priceProduct = document.createElement('p');
+    priceProduct.innerText = '$' + price;
+    const nameProduct = document.createElement('p');
+    nameProduct.innerText = name;
+    const descriptionProduct = document.createElement('p');
+    descriptionProduct.innerText = description;
     const addToCart = document.createElement('button');
     addToCart.classList.add('primary-button');
     addToCart.classList.add('add-to-cart');
     addToCart.innerText = "Añadir al carrito";
-    productDetailInfo.appendChild(price);
-    productDetailInfo.appendChild(name);
-    productDetailInfo.appendChild(description);
+    productDetailInfo.appendChild(priceProduct);
+    productDetailInfo.appendChild(nameProduct);
+    productDetailInfo.appendChild(descriptionProduct);
     productDetailInfo.appendChild(addToCart);
 
-    productDetailInfo.appendChild(name);
-    productDetailInfo.appendChild(description);
+    productDetailInfo.appendChild(nameProduct);
+    productDetailInfo.appendChild(descriptionProduct);
     productDetailInfo.appendChild(addToCart);
 
 
@@ -160,6 +159,7 @@ function renderProducts (arrayProducts) {
     for (product of arrayProducts) {
         createProductCard();
     }    
+    createProductDetail(product.name, product.img, product.price, product.description);
 }
 
 
