@@ -79,10 +79,10 @@ a:hover, a:focus {
     cursor: pointer;
     color: var(--soft-grey);
     font-size: var(--sm);
+    font-weight: bold;
 }
 .navbar__email:hover, .navbar__email:focus-visible {
     color: var(--main-color);
-    font-weight: bold;
 }
 
 .navbar__shopping-cart {
