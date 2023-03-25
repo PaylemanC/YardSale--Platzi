@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,305 +10,131 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 240px);
-            gap: 26px;
-            place-content: center;
-            margin: 2vh 0;
-        }
-
-        .product-card {
-            width: 240px;
-        }
-
-        .product-card__img {
-            width: 230px;
-            height: 240px;
-            border-radius: 24px;
-            object-fit: cover;
-            border: 4px double var(--main-color);
-            cursor: pointer;
-        }
-
-        .product-card__info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .product-card__info div p:nth-child(1) {
-            font-weight: bold;
-            font-size: var(--md);
-            margin-bottom: 4px;
-        }
-
-        .product-card__info div p:nth-child(2) {
-            font-size: var(--md);
-            margin: 4px;
-            color: var(--dark);
-        }
-
-        .product-card figure {
-            margin: 0;
-        }
-
-        .product-card figure img {
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-        }
-        .product-card figure img:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 640px) {
-            .cards-container {
-                grid-template-columns: repeat(auto-fill, 140px);
-            }
-
-            .product-card {
-                width: 140px;
-            }
-
-            .product-card__img {
-                width: 100%;
-                height: 140px;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <nav>
+        <img src="assets/icons/icon_menu.svg" alt="Menú" class="menu">
+
+        <div class="navbar-left">
+            <img src="assets/logos/logo_yard_sale.svg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">Todo</a></li>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Electrodomesticos</a></li>
+                <li><a href="#">Muebles</a></li>
+                <li><a href="#">Juguetes</a></li>
+                <li><a href="#">Otros</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar__email">carinapaylemandev@gmail.com</li>
+                <li class="navbar__shopping-cart">
+                    <img src="assets/icons/icon_shopping_cart.svg" alt="Carrito">
+                    <div>4</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="desktop-menu inactive">
+            <ul>
+                <li><a href="mis-pedidos.html" class="title">Mis pedidos</a></li>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-menu inactive">
+            <ul>
+                <li>CATEGORÍAS</li>
+                <li><a href="#">Todo</a></li>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Electrodomesticos</a></li>
+                <li><a href="#">Muebles</a></li>
+                <li><a href="#">Juguetes</a></li>
+                <li><a href="#">Otros</a></li>
+            </ul>
+    
+            <ul>
+                <li><a href="mis-pedidos.html">Mis pedidos</a></li>
+                <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+            </ul>
+    
+            <ul>
+                <li class="email">carinapaylemandev@gmail.com</li>
+                <li><a href="#" class="sign-out">Salir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <aside id="shoppingCartDetail" class="inactive">
+        <div class="title-container">
+            <img src="assets/icons/flechita.svg" alt="Expandir">
+            <p class="title">Mi carrito</p>
+        </div>
+        <div class="my-orders__content">
+                <div class="my-orders__shopping-cart">
+                    <!--#01-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#02-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#03-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                    <!--#04-->
+                    <div class="shopping-cart__product">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                        </figure>
+                        <p>Sillón</p>
+                        <p>$120.00</p>
+                        <img src="assets/icons/icon_close.png" alt="Cancelar" class="btn-cancel">
+                    </div>
+                </div>
+            
+                <div class="content__order">
+                    <p>
+                        <span>Total</span>
+                    </p>
+                    <p>$480.00</p>
+                    <button class="primary-button">Comprar</button>
+                </div>
+        </div>
+    </aside>
+    
+    <aside id="productDetail" class="inactive">
+         <!-- Detalles insertados con JS -->
+    </aside>
+
     <section class="main-container">
         <div class="cards-container">
-            <!--#01-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#02-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#03-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#04-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#05-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#06-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#07-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#08-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#09-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#10-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#11-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#12-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#13-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#14-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-             <!--#15-->
-             <div class="product-card">
-                <img src="https://images.pexels.com/photos/937526/pexels-photo-937526.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Candelabro</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-
-            <!--#16-->
-            <div class="product-card">
-                <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="product-card__img">
-                <div class="product-card__info">
-                    <div>
-                        <p>$120,00</p>
-                        <p>Sillón</p>
-                    </div>
-                    <figure>
-                        <img src="assets/icons/bt_add_to_cart.svg" alt="">
-                    </figure>
-                </div>
-            </div>
+            <!-- Cards insertadas con JS -->
         </div>
     </section>
-</body>
 
+
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
