@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+:root{
+  $dark: #232830;
+  $main-color: #82b389;
+  $text-input-field: #ededed;
+  $soft-grey: #a3a3a3;
+  $background: #F5F5F5;
+  $sm: 1.4rem;
+  $md: 1.6rem;
+  $lg: 1.8rem;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
+  background: var(--background);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
