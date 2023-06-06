@@ -12,8 +12,8 @@ export class ProductsListComponent {
     this.myShoppingCart = this.shoppingCartService.getShoppingCart();
   }
   myShoppingCart: Product[] = [];
-  total = 0;
-  
+  total: number = 0;
+
   products: Product[] = [
     {
       id: 1,
