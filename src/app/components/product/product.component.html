@@ -5,7 +5,7 @@
       <p>{{product.price | currency}}</p>
       <p>{{product.title}}</p>
     </div>
-    <figure>
+    <figure (click)="onAddToCart()">
       <img src="../../../assets/bt_add_to_cart.svg">
     </figure>
   </div>

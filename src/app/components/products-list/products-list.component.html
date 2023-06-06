@@ -1,5 +1,11 @@
 <section class="main-container">
+  <p>Productos añadidos al carrito: {{myShoppingCart.length}}</p>
+  <p>Total: ${{total}}</p>
   <div class="cards-container">
-    <app-product [product]="product" *ngFor="let product of products"></app-product>
+    <app-product
+    [product]="product"
+    *ngFor="let product of products"
+    (addedProduct)="onAddToShoppingCart($event)"
+    ></app-product>
   </div>
 </section>
