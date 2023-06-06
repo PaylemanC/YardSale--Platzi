@@ -10,24 +10,63 @@ nav {
   .menu {
     display: none;
   }
-  
-  .navbar-left ul, .navbar-right ul {
+
+  .navbar-left {
     display: flex;
-    align-items: center;
-    height: 60px;
+    .logo {
+      width: 125px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      margin-left: 12px;
+    }
+    a {
+      padding: 8px;
+    }
   }
 
-  .navbar-left ul {
-    margin-left: 12px;
+  .navbar-right {
+    ul {
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+    li {
+      padding: 8px;
+    }
+    .navbar__email {
+      cursor: pointer;
+      color: $soft-grey;
+      font-size: $sm;
+      font-weight: bold;
+      &:hover, &:focus-visible {
+        color: $main-color;
+      }
+    }
+    .navbar__shopping-cart {
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.03);
+      }
+      div {
+        width: 18px;
+        height: 18px;
+        background-color: $main-color;
+        border-radius: 100%;
+        font-size: $sm;
+        font-weight: bold;
+        position: absolute;
+        top: -5px;
+        right: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
-
-  .navbar-left ul li a, .navbar-right ul li {
-    padding: 8px;
-  }
-}
-
-.logo {
-  width: 125px;
 }
 
 a {
@@ -44,50 +83,22 @@ a:hover, a:focus {
   color: $main-color;
 }
 
-.navbar__email {
-  cursor: pointer;
-  color: $soft-grey;
-  font-size: $sm;
-  font-weight: bold;
-}
-.navbar__email:hover, .navbar__email:focus-visible {
-  color: $main-color;
-}
+// .inactive {
+//   display: none;
+// }
 
-.navbar__shopping-cart {
-  position: relative;
-  cursor: pointer;
-}
-.navbar__shopping-cart:hover {
-  transform: scale(1.03);
-}
-
-.navbar__shopping-cart div {
-  width: 18px;
-  height: 18px;
-  background-color: $main-color;
-  border-radius: 100%;
-  font-size: $sm;
-  font-weight: bold;
-  position: absolute;
-  top: -5px;
-  right: -1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.inactive {
-  display: none;
-}
+// .mobile-menu, .desktop-menu {
+//   display: none;
+// }
 
 @media screen and (max-width: 640px) {
-  .menu {
+  nav {
+    .menu {
       display: block;
       cursor: pointer;
-  }
-
-  .navbar-left ul, .navbar__email, .desktop-menu {
+    }
+    .navbar-left, .navbar__email, .desktop-menu {
       display: none;
+    }
   }
 }
