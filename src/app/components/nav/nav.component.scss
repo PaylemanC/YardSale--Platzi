@@ -27,6 +27,9 @@ nav {
     a {
       padding: 8px;
     }
+    .li-display {
+      display: none;
+    }
   }
 
   .navbar-right {
@@ -133,7 +136,7 @@ a:hover, a:focus {
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 670px) {
   nav {
     .menu {
       display: block;
@@ -141,6 +144,23 @@ a:hover, a:focus {
     }
     .navbar-left, .navbar__email, .desktop-menu {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navbar-left {
+    li:not(:nth-child(1)) {
+      display: none;
+    }
+  }
+  nav .navbar-left .li-display {
+    display: inline-block;
+    svg {
+      cursor: pointer;
+      margin-left: 8px;
+      background-color: #c1e3c5;
+      border-radius: 100%;
     }
   }
 }
