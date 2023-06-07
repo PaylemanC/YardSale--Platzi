@@ -1,11 +1,11 @@
 @import '../../../styles.scss';
 
 .product-card {
-  width: 240px;
+  width: 250px;
 
   .product-card__img {
-    width: 230px;
-    height: 240px;
+    width: 240px;
+    height: 250px;
     border-radius: 24px;
     object-fit: cover;
     border: 4px double $main-color;
