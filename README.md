@@ -1,5 +1,9 @@
 # YardSale
 
+E-commerce de venta de garaje con fines educativos. Prácticas integradas de los cursos "Práctico de Frontend Developer", "Práctico de JS" y los cursos de la ruta de "Frontend con Angular" en Platzi.
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
 ## Development server
