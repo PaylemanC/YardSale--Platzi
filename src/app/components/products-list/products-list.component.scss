@@ -1,7 +1,23 @@
+.main-container {
+  margin: 16px;
+}
+
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
   gap: 26px;
   place-content: center;
-  margin: 2vh 0;
+}
+
+.loader-button__container {
+  text-align: center;
+}
+
+.loader-button {
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #82b389;
+  padding: 16px;
+  cursor: pointer;
+  color: white;
 }

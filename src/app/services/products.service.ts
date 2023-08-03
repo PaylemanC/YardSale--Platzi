@@ -15,6 +15,12 @@ export class ProductsService {
     return this.http.get<Product[]>(this.urlAPI);
   }
 
+  getProductsByPage(limit: number, offset: number) {
+    return this.http.get<Product[]>(this.urlAPI, {
+      params: { limit, offset }
+    });
+  }
+
   getProduct(id: string) {
     return this.http.get<Product>(`${this.urlAPI}/${id}`)
   }
