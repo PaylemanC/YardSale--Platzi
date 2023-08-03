@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -11,9 +12,12 @@ export class ProductsListComponent {
   constructor (private shoppingCartService: ShoppingCartService) {
     this.myShoppingCart = this.shoppingCartService.getShoppingCart();
   }
+
   myShoppingCart: Product[] = [];
   total: number = 0;
 
+  products: Product[] = [];
+  /*
   products: Product[] = [
     {
       id: 1,
@@ -51,6 +55,7 @@ export class ProductsListComponent {
       description: 'Nisi do ullamco sit aute. Ex consectetur Lorem nisi fugiat. Dolore sunt officia ipsum minim fugiat exercitation occaecat eiusmod et veniam occaecat in laborum Lorem. Laboris laborum amet exercitation officia commodo voluptate elit laborum ea dolor.'
     }
   ];
+  */
 
   onAddToShoppingCart(product: Product) {
     this.shoppingCartService.addProduct(product);

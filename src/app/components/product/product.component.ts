@@ -10,10 +10,14 @@ export class ProductComponent {
   constructor() { }
 
   @Input() public product: Product = {
-    id: 0,
+    id: '',
     title: '',
+    images: [],
     price: 0,
-    img: '',
+    category: {
+      id: '0',
+      name: ''
+    },
     description: ''
   }
 
