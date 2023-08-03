@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent {
-  constructor (private shoppingCartService: ShoppingCartService) {
+  constructor (private shoppingCartService: ShoppingCartService, private productsService: ProductsService) {
     this.myShoppingCart = this.shoppingCartService.getShoppingCart();
   }
 
@@ -17,6 +17,15 @@ export class ProductsListComponent {
   total: number = 0;
 
   products: Product[] = [];
+
+  ngOnInit(): void {
+    this.productsService.getAllProducts()
+    .subscribe(data => {
+      // console.log(data);
+      this.products = data;
+    });
+  }
+
   /*
   products: Product[] = [
     {
