@@ -1,12 +1,12 @@
 <div class="product-card">
-  <img class="product-card__img" [src]="product.images[0]">
+  <img class="product-card__img" [src]="product.images[0]" alt="Imagen de {{product.title}}">
   <div class="product-card__info">
     <div>
       <p>{{product.price | currency}}</p>
       <p>{{product.title}}</p>
     </div>
     <figure (click)="onAddToCart()">
-      <img src="../../../assets/bt_add_to_cart.svg">
+      <img src="./assets/bt_add_to_cart.svg">
     </figure>
   </div>
 </div>
