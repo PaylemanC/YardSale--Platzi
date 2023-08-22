@@ -9,6 +9,9 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { AccountComponent } from './pages/account/account.component';
+import { OrdersListComponent } from './pages/orders-list/orders-list.component';
+import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CategoryComponent } from './pages/category/category.component';
     ProductComponent,
     ProductsListComponent,
     HomeComponent,
-    CategoryComponent
+    CategoryComponent,
+    AccountComponent,
+    OrdersListComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
