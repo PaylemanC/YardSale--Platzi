@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
 import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 import { ProductsService } from 'src/app/services/products.service';
@@ -16,19 +16,17 @@ export class ProductsListComponent {
   myShoppingCart: Product[] = [];
   total: number = 0;
 
-  products: Product[] = [];
+  @Input() products: Product[] = [];
 
-  limit = 10;
-  offset = 0;
-
-  ngOnInit(): void {
-    this.productsService.getProductsByPage(15, 0)
-    .subscribe(data => {
-      // console.log(data);
-      this.products = data;
-    });
+  onAddToShoppingCart(product: Product) {
+    this.shoppingCartService.addProduct(product);
+    this.total = this.shoppingCartService.getTotal();
   }
 
+  @Output() loadMore = new EventEmitter();
+  onLoadMore() {
+    this.loadMore.emit();
+  }
   /*
   products: Product[] = [
     {
@@ -69,17 +67,5 @@ export class ProductsListComponent {
   ];
   */
 
-  onAddToShoppingCart(product: Product) {
-    this.shoppingCartService.addProduct(product);
-    this.total = this.shoppingCartService.getTotal();
-  }
 
-  loadMore() {
-    this.productsService.getProductsByPage(this.limit, this.offset)
-    .subscribe(data => {
-      console.log(data);
-      this.products = this.products.concat(data);
-      this.offset += this.limit;
-    });
-  }
 }
